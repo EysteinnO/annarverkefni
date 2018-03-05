@@ -33,6 +33,7 @@
 		<td><a href="/company/Olís">Olís</a></td>	
 		<td><a href="/company/Orkan">Orkan</a></td>	
 		<td><a href="/company/Orkan X">Orkan X</a></td>									
+		<td><a href="/company/Skeljungur">Skeljungur</a></td>		
 	</tbody>
 </table>
 
