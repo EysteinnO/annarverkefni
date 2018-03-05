@@ -31,5 +31,5 @@ def villa(error):
 def villa500(error):
     return "Server Error"
 
-run()
-#run(host='0.0.0.0', port=os.environ.get('PORT'))
+#run()
+run(host='0.0.0.0', port=os.environ.get('PORT'))
