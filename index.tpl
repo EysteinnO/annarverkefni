@@ -19,23 +19,29 @@
 <img src="/staticskrar/orkan.png">
 <img src="/staticskrar/orkanx.png">
 <img src="/staticskrar/skeljungur.png">
-
-
 </div>
-
 
 <div class="container">
 <table class="center">
-	<tbody>						
-		<td><a href="/company/N1">N1</a></td>		
-		<td><a href="/company/Atlantsolía">Atlantsolía</a></td>	
-		<td><a href="/company/ÓB">ÓB</a></td>	
-		<td><a href="/company/Olís">Olís</a></td>	
-		<td><a href="/company/Orkan">Orkan</a></td>	
-		<td><a href="/company/Orkan X">Orkan X</a></td>									
-		<td><a href="/company/Skeljungur">Skeljungur</a></td>		
+	<tbody>		
+		
+
+<% 		company = []
+		for i in data['results']:
+			company.append(i['company'])
+		end
+		company = set(company)
+		company = list(company)
+		print(company[0])
+%>
+
+%		for i in company:
+			<td><a href="/company/{{i}}">{{i}}</a></td>
+%		end
+			
 	</tbody>
 </table>
+
 
 <h3> Ódýrasta bensín: Costco Iceland(189.9kr)</h3>
 <h3> Ódýrasta diesel: Costco Iceland(180.9kr)</h3>

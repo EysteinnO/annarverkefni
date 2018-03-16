@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 from bottle import *
 import os
-import json
+import urllib.request, json
 
-with open('petrol.json') as json_data:
-    data = json.load(json_data)
-    #print(data)       
+with urllib.request.urlopen("http://apis.is/petrol") as url:
+    data = json.loads(url.read().decode())     
     
 @route('/staticskrar/<skra>')
 def staticskrar(skra):
@@ -31,5 +30,5 @@ def villa(error):
 def villa500(error):
     return "Server Error"
 
-#run()
-run(host='0.0.0.0', port=os.environ.get('PORT'))
+run()
+#run(host='0.0.0.0', port=os.environ.get('PORT'))
